@@ -36,8 +36,14 @@ print 'Sample of data2: ', cleandata2[0:10]
 
 rand1 = random.sample(cleandata1, len(cleandata1))
 
-plt.scatter(cleandata1, cleandata2, c='blue', label='real', alpha=0.5)
-plt.scatter(rand1, cleandata2, c='red', label='randomized', alpha=0.5)
+plt.scatter(cleandata1, cleandata2, c='blue')
+plt.xlabel(sys.argv[1])
+plt.ylabel(sys.argv[2])
+plt.show()
+
+
+plt.scatter(cleandata1, cleandata2, c='blue', label='real', alpha=0.2)
+plt.scatter(rand1, cleandata2, c='orange', label='randomized', alpha=0.2)
 plt.legend()
 plt.xlabel(sys.argv[1])
 plt.ylabel(sys.argv[2])
